@@ -31,10 +31,10 @@ cpf_list = cpf.replace('.', '')
 lista_cpf.append(cpf_list)
 print(lista_cpf)
 for i in range(9):
-    soma += int(cpf[i]) * (10 - i)
+    soma += int(cpf_list[i]) * (10 - i)
 digito = (soma * 10) % 11
 digito = digito if digito <= 9 else 0
-print(f'O primeiro dígito do CPF {cpf} é {digito}')
+print(f'O primeiro dígito do CPF {cpf_list} é {digito}')
 if lista_cpf[0][9] == str(digito):
     print('CPF válido')  
 else:
