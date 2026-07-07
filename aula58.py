@@ -20,10 +20,8 @@ print(multiplicacao)
 
 def par_ou_impar(numero):
     if numero % 2 == 0:
-        return "par"
-    else:
-        return "ímpar"
-    
+        return f'{numero} é par'
+    return f'{numero} é ímpar'
 
 par_ou_impar_resultado = par_ou_impar(7)
 print(par_ou_impar_resultado)
