@@ -17,13 +17,22 @@ perguntas = [
         'Opções': ['4', '5', '2', '1'],
         'Resposta': '5',
     },
+    {
+        'Pergunta': 'Quanto é 15-10?',
+        'Opções': ['4', '5', '2', '1'],
+        'Resposta': '5',
+    },
 ]
 
 letras = ['A', 'B', 'C', 'D']
+contador = 0
+
 # Linha em branco para separar as perguntas
 for pergunta in perguntas:
     print('Pergunta:', pergunta['Pergunta'])
     print('Opções:')
+
+
     for indice, opcao in enumerate(pergunta['Opções']):
         print(f'{letras[indice]}) {opcao}')
 
@@ -32,13 +41,19 @@ for pergunta in perguntas:
     indice_resposta = letras.index(resposta_usuario)
     resposta_correta = pergunta['Opções'][indice_resposta]
 
+
     if resposta_correta == pergunta['Resposta']:
         print(f'Você escolheu: {resposta_correta}')
         print('Resposta correta!')
+        contador += 1
     else:
+        print(f'Você escolheu: {resposta_correta}')
         print('Resposta incorreta. A resposta correta é:', pergunta['Resposta'])
 
+    
     print()  # Linha em branco para separar as perguntas
+
+print('Você acertou', contador, 'pergunta(s) de', len(perguntas))
 
 
 
